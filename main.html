@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuron Dynamics</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="brand">
+            <div class="logo-box">N</div>
+            <div class="title">Neuron Dynamics</div>
+        </div>
+        <div class="meta">
+            Interactive Simulator v1.3<br>
+        </div>
+    </header>
+
+    <div class="layout-wrapper">
+        
+        <div class="intro-text">
+            Explore the fundamental dynamics of spiking neurons. Select a model to visualize phase plane trajectories and membrane potential responses.
+        </div>
+
+        <div class="sim-grid">
+            
+            <aside class="controls-area">
+                
+                <span class="section-label">Select sodel</span>
+                <select class="styled-select js-system-select"></select>
+
+                <span class="section-label">Governing equations</span>
+                <div class="math-container js-equation-display"></div>
+
+                <span class="section-label" style="margin-bottom: 15px; display:block;">Parameters</span>
+                <div class="js-params-container"></div>
+
+                <div class="btn-row">
+                    <button class="btn primary js-btn-restart">Run simulation</button>
+                    <button class="btn js-btn-reset">Reset</button>
+                </div>
+
+            </aside>
+
+            <main class="plot-area js-plot-div"></main>
+
+        </div>
+
+        <footer class="app-footer">
+            <div class="refs">
+                <strong>References</strong>
+                <ul class="refs-list">
+                    <li>Izhikevich, E. M. (2003). Simple model of spiking neurons. <em>IEEE Trans. Neural Networks.</em></li>
+                    <li>Hodgkin, A. L., & Huxley, A. F. (1952). A quantitative description of membrane current. <em>J. Physiol.</em></li>
+                </ul>
+            </div>
+            <div class="copy">
+                Rayane Rocha &copy; 2026
+            </div>
+        </footer>
+
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

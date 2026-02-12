@@ -1,0 +1,314 @@
+/* THEME: SOFT PROFESSIONAL LAB
+   Deep Navy, Sans-Serif, Soft Grays.
+*/
+
+:root {
+    /* DEEP NAVY - Dark, serious, but not harsh black */
+    --primary: #1a2b42; 
+    
+    /* SOFT BACKGROUNDS */
+    --bg-body: #f7f9fc;
+    --bg-panel: #ffffff;
+    
+    /* SOFT TEXT - avoiding pure #000000 */
+    --text-main: #2c3e50;
+    --text-muted: #64748b;
+    
+    /* SUBTLE BORDERS */
+    --border: 1px solid #e2e8f0;
+    --radius: 6px; /* Slightly rounded corners for "softness" */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* ALL SANS-SERIF */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- HEADER --- */
+.app-header {
+    background: var(--bg-panel);
+    border-bottom: var(--border);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-box {
+    width: 32px;
+    height: 32px;
+    background: var(--primary);
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+.meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: right;
+    line-height: 1.2;
+}
+
+/* --- LAYOUT --- */
+.layout-wrapper {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.intro-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.sim-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+/* --- CONTROLS (Left Panel) --- */
+.controls-area {
+    background: var(--bg-panel);
+    border: var(--border);
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.01);
+}
+
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+/* Styled Dropdown */
+.styled-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: var(--border);
+    border-radius: var(--radius);
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: border-color 0.2s;
+}
+
+.styled-select:hover {
+    border-color: #cbd5e1;
+}
+
+/* Equation Box */
+.math-container {
+    background: #f8fafc;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+/* Sliders */
+.param-block {
+    margin-bottom: 15px;
+}
+
+.param-item {
+    margin-bottom: 12px;
+}
+
+.param-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: var(--text-main);
+}
+
+.param-val {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-weight: 600;
+    color: var(--primary);
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+input[type=range] {
+    width: 100%;
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    outline: none;
+    /*-webkit-appearance: none; */
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--primary);
+    border-radius: 50%; /* Circle thumb */
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.btn-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #233956;
+    /*transform: translateY(-1px); */
+}
+
+.btn:not(.primary) {
+    background: #fff;
+    border: var(--border);
+    color: var(--text-main);
+}
+
+.btn:not(.primary):hover {
+    background: #f1f5f9;
+}
+
+/* --- PLOT AREA (Right Panel) --- */
+.plot-area {
+    background: var(--bg-panel);
+    border: var(--border);
+    border-radius: var(--radius);
+    height: 580px; /* Fixed height matching controls roughly */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.01);
+}
+
+/* --- FOOTER --- */
+.app-footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.refs strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.refs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.refs-list li {
+    margin-bottom: 4px;
+}
+
+/* Equation Formatting */
+.eq-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    font-family: "Times New Roman", Times, serif; /* Math looks best in Serif */
+    font-size: 1.1rem;
+    color: #1a2b42;
+}
+
+.eq-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.indent {
+    margin-left: 40px;
+}
+
+.eq-note {
+    font-family: -apple-system, sans-serif;
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.var {
+    font-style: italic;
+}
+
+.op {
+    margin: 0 2px;
+    color: #555;
+}
+
+/* Fraction Style for dV/dt */
+.frac {
+    font-style: italic;
+}
