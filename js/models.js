@@ -115,7 +115,7 @@ export const NEURON_MODELS = {
         `,
         parameters: [
             { id: 'I_ext', label: 'Input Current (µA)', min: 0, max: 20, step: 0.5, value: 10 },
-            { id: 'gNa', label: 'gNa (mS/cm²)', min: 0, max: 150, step: 10, value: 120 },
+            { id: 'gNa', label: 'gNa (mS/cm²)', min: 0, max: 200, step: 10, value: 120 },
             { id: 'gK', label: 'gK (mS/cm²)', min: 0, max: 50, step: 5, value: 36 },
             { id: 'gL', label: 'gL (mS/cm²)', min: 0, max: 1.0, step: 0.1, value: 0.3 },
         ],
